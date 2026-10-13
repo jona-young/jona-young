@@ -39,7 +39,8 @@ I engineered an asynchronous order-intake and customer fulfillment web applicati
 ### ⚡ Key Engineering Achievements:
 * **Infrastructure Layout:** Provisioned and configured self-hosted **Ubuntu Server droplets on DigitalOcean**, managing Nginx configuration blocks, reverse proxy routing, and SSL/TLS certificate updates.
 * **Financial & State Orchestration:** Programmatically integrated the **PayPal Invoicing API** within the **Next.js Server Core** to serve as the primary billing pipeline for a physical service business; utilized **Prisma ORM** to capture unique invoice metadata and securely log payment tokens to a **Managed PostgreSQL database**, enabling the seamless collection of **$20K–$30K in revenue**.
-* **Event-Driven Communications:** Architected an automated notification engine utilizing the **Resend API** and **Twilio API** to dispatch real-time order lifecycle milestones to customers.
+* **Event-Driven Communications:** Engineered custom asynchronous webhook handlers inside the server routing layer to listen for payment confirmations, updating relational database schemas and instantly triggering customer milestones via the **Resend** and **Twilio** APIs.
+
 
 ---
 
