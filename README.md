@@ -22,6 +22,7 @@ I engineered an asynchronous order-intake and customer fulfillment web applicati
 
 ### 📐 System Design Blueprint
 
+```text
  [ Next.js / TypeScript UI ] ──(HTTPS)──> [ Nginx Reverse Proxy ]
                                                          │
                                                  (Ubuntu / Droplets)
@@ -33,6 +34,7 @@ I engineered an asynchronous order-intake and customer fulfillment web applicati
                                                          │
                                                          ▼
                                                 [ Managed PostgreSQL ]
+```
 
 ### ⚡ Key Engineering Achievements:
 * **Infrastructure Layout:** Provisioned and configured self-hosted **Ubuntu Server droplets on DigitalOcean**, managing Nginx configuration blocks, reverse proxy routing, and SSL/TLS certificate updates.
