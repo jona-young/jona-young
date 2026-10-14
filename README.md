@@ -8,7 +8,7 @@ As a **Technical Founder**, my primary codebases operate live, commercial platfo
 
 ## 🛠️ Tech Stack & Core Competencies
 * **Languages:** TypeScript, JavaScript, Python, SQL (PostgreSQL)
-* **Frameworks & Libraries:** Next.js, React, Node.js, Express, NumPy
+* **Frameworks & Libraries:** Next.js, React, Node.js, Express, Pandas, NumPy
 * **Cloud & DevOps:** DigitalOcean (Droplets, Managed DBs), AWS (EC2), Ubuntu Server, Nginx Reverse Proxies, Linux CLI
 * **Automation & Testing:** Playwright, Selenium, Browser Automation Scripting, API Lifecycle Testing
 * **Integrated Engines:** PayPal Invoicing API, Twilio SMS Engine, Resend Transactional Mailers
@@ -45,6 +45,6 @@ I engineered an asynchronous order-intake and customer fulfillment web applicati
 ---
 
 ## 🧪 Automation Sandbox: Python & Selenium
-* Built custom scripting workflows designed to eliminate manual data entry. Parses tabular structures (Excel/NumPy arrays) and programmatically drives browser behavior using Selenium to automate operational compliance pipelines.
+* Built custom scripting workflows designed to eliminate manual data entry. Parses tabular structures (Excel/Pandas) and programmatically drives browser behavior using Selenium to automate operational compliance pipelines.
 
 📫 **Let's Connect:** https://www.linkedin.com/in/jonayoung | young.jon@icloud.com
