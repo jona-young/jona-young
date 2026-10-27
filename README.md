@@ -1,26 +1,27 @@
 # Hi there, I'm Jonathan 👋
 
-I am a system-driven **Full-Stack Engineer** based in the Greater Toronto Area. I specialize in building production-grade web applications, deploying secure cloud infrastructure, and engineering resilient browser automation pipelines. 
+I'm a **Full-Stack Software Engineer** based in the Greater Toronto Area. I build and run production web applications end to end: features, databases, payment integrations, automated tests, CI pipelines, and the servers they run on.
 
-As a **Technical Founder**, my primary codebases operate live, commercial platforms and sit in secure, private repositories. Below is an architectural blueprint of the systems I design and maintain.
+My main codebase powers a live commercial platform, so it lives in a private repository. Below is an overview of how it's built, tested, and deployed.
 
 ---
 
-## 🛠️ Tech Stack & Core Competencies
+## 🛠️ Tech Stack
 * **Languages:** TypeScript, JavaScript, Python, SQL (PostgreSQL)
-* **Frameworks & Libraries:** Next.js, React, Node.js, Express, Pandas, NumPy
-* **Cloud & DevOps:** DigitalOcean (Droplets, Managed DBs), AWS (EC2), Ubuntu Server, Nginx Reverse Proxies, Linux CLI
-* **Automation & Testing:** Playwright, Selenium, Browser Automation Scripting, API Lifecycle Testing
-* **Integrated Engines:** PayPal Invoicing API, Twilio SMS Engine, Resend Transactional Mailers
+* **Frameworks & Libraries:** Next.js, React, Node.js, Express, Prisma ORM, Pandas, NumPy
+* **Testing & CI/CD:** Vitest, Playwright, Selenium, GitHub Actions
+* **Cloud & DevOps:** DigitalOcean (Droplets, Managed DBs), AWS (EC2), Ubuntu Server, Nginx, Linux CLI
+* **Integrations:** PayPal Invoicing API, Twilio SMS, Resend, REST APIs & Webhooks
+* **AI Tools:** Claude Code
 
 ---
 
-## 🏗️ Core Architecture Case Study: Commercial E-Commerce Platform
-*Note: The repository for this platform is private to protect transaction infrastructure and customer data. A guided codebase walkthrough is available upon request during technical interviews.*
+## 🏗️ Case Study: Order & Payments Platform
+*The repository is private to protect transaction infrastructure and customer data. I'm happy to walk through the codebase during technical interviews.*
 
-I engineered an asynchronous order-intake and customer fulfillment web application from scratch that has securely processed **\$20K–\$30K in consumer transactions** over a 2-year lifecycle.
+I built an order-intake and fulfillment platform from scratch that has processed **$25K–$35K in customer revenue** over two years.
 
-### 📐 System Design Blueprint
+### 📐 System Design
 
 ```text
  [ Next.js / TypeScript UI ] ──(HTTPS)──> [ Nginx Reverse Proxy ]
@@ -36,15 +37,30 @@ I engineered an asynchronous order-intake and customer fulfillment web applicati
                                                 [ Managed PostgreSQL ]
 ```
 
-### ⚡ Key Engineering Achievements:
-* **Infrastructure Layout:** Provisioned and configured self-hosted **Ubuntu Server droplets on DigitalOcean**, managing Nginx configuration blocks, reverse proxy routing, and SSL/TLS certificate updates.
-* **Financial & State Orchestration:** Programmatically integrated the **PayPal Invoicing API** within the **Next.js Server Core** to serve as the primary billing pipeline for a physical service business; utilized **Prisma ORM** to capture unique invoice metadata and securely log payment tokens to a **Managed PostgreSQL database**, enabling the seamless collection of **$20K–$30K in revenue**.
-* **Event-Driven Communications:** Engineered custom asynchronous webhook handlers inside the server routing layer to listen for payment confirmations, updating relational database schemas and instantly triggering customer milestones via the **Resend** and **Twilio** APIs.
+### 🚀 Delivery Pipeline
 
+```text
+ [ Pull Request ] ──> [ GitHub Actions: lint · type check · unit tests · E2E tests ]
+                                                         │
+                                                  (all checks pass)
+                                                         │
+                                                         ▼
+                                     [ Production deploy (off-peak hours) ]
+```
+
+### ⚡ Key Engineering Work
+* **Infrastructure:** Provisioned and maintain Ubuntu servers on DigitalOcean, including Nginx reverse proxy routing and SSL/TLS certificates.
+* **Payments:** Integrated the **PayPal Invoicing API** into the server layer as the business's billing pipeline, using **Prisma** to store invoice metadata and payment status in **PostgreSQL**.
+* **Event-Driven Notifications:** Built webhook handlers that listen for payment confirmations, update order records, and trigger customer updates through **Resend** (email) and **Twilio** (SMS).
+* **Testing:** Unit tests with **Vitest** for business logic and payload parsing, plus end-to-end tests with **Playwright** covering checkout, invoicing, and order-status flows.
+* **CI/CD:** A **GitHub Actions** pipeline runs linting, TypeScript type checks, and the full test suite on every pull request; failing checks block the merge. Releases are validated in staging before going to production.
+* **Incident Response:** When a bug in payload parsing halted invoice creation, a manual-invoice fallback I'd built in advance kept every order on schedule. I shipped the fix and added regression tests so it can't recur.
 
 ---
 
-## 🧪 Automation Sandbox: Python & Selenium
-* Built custom scripting workflows designed to eliminate manual data entry. Parses tabular structures (Excel/Pandas) and programmatically drives browser behavior using Selenium to automate operational compliance pipelines.
+## 🧪 Automation: Python & Selenium
+* Built Python scripts that parse spreadsheet data with **Pandas** and drive browser workflows with **Selenium**, automating compliance tasks and sending targeted email alerts in place of manual data entry.
 
-📫 **Let's Connect:** https://www.linkedin.com/in/jonayoung | young.jon@icloud.com
+---
+
+📫 **Let's connect:** [LinkedIn](https://www.linkedin.com/in/jonayoung) · young.jon@icloud.com
