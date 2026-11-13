@@ -61,7 +61,7 @@ I built an order-intake and fulfillment platform from scratch for my climbing sh
 * **Webhook Security:** Every incoming PayPal webhook's signature is verified through PayPal's verification API before it can update an order.
 * **Event-Driven Notifications:** Webhook handlers listen for payment confirmations, update order records, and trigger customer updates through **Resend** (email) and **Twilio** (SMS).
 * **Testing:** Unit tests with **Vitest** for business logic and payload parsing, plus end-to-end tests with **Playwright** covering checkout, invoicing, and order-status flows.
-* **CI/CD:** A **GitHub Actions** pipeline runs linting, TypeScript type checks, and the full test suite on every pull request; failing checks block the merge. Releases are validated in staging before going to production.
+* **CI/CD:** A **GitHub Actions** pipeline runs linting, TypeScript type checks, and the full test suite on every pull request; failing checks block the merge.
 * **Incident Response:** When a bug in payload parsing halted invoice creation, a manual-invoice fallback I'd built in advance kept every order on schedule. I shipped the fix and added regression tests so it can't recur.
 
 ### 📊 Business Reporting
