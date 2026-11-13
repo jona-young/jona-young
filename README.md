@@ -51,9 +51,6 @@ I built an order-intake and fulfillment platform from scratch for my climbing sh
                                         (all checks pass → merge)
                                                     │
                                                     ▼
-                                         [ Staging validation ]
-                                                    │
-                                                    ▼
                                  [ Production deploy (off-peak hours) ]
 ```
 
